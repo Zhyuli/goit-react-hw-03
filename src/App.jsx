@@ -2,8 +2,8 @@
 
 import { ContactList } from './components/ContactList/ContactList';
 import { Title } from './components/Title/Title';
-import { SearchBox } from './components/SearchBox';
-import { ContactForm } from './components/ContactForm';
+import { SearchBox } from './components/SearchBox/SearchBox';
+import { ContactForm } from './components/ContactForm/ContactForm';
 
 import './App.css';
 import { useState } from 'react';
