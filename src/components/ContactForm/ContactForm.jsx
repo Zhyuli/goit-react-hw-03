@@ -43,10 +43,5 @@ export const ContactForm = ({ onAdd }) => {
         </button>
       </Form>
     </Formik>
-
-    // <form onSubmit={handleSubmit}>
-    //   <input type="text" name="username" />
-    //   <button type="submit">Add user</button>
-    // </form>
   );
 };

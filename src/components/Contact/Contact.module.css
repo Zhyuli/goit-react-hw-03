@@ -20,6 +20,7 @@
 
 .number {
     color: #666;
+
 }
 
 .btn {
@@ -35,5 +36,13 @@
 
 .btn:hover {
     background-color: #f9f9f9;
+
+}
+
+.svg {
+    fill: #666;
+    margin-right: 5px;
+    height: 14px;
+    width: 14px;
 
 }
