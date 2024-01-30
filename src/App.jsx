@@ -19,14 +19,10 @@ export const App = () => {
 
   const addContact = newContact => {
     setContacts(prevContacts => {
-      return [
-        ...prevContacts,
-        {
-          name: newContact,
-        },
-      ];
+      return [...prevContacts, newContact];
     });
   };
+
   const deleteContact = id => {
     setContacts(prevContacts => {
       return prevContacts.filter(contact => contact.id !== id);
@@ -42,7 +38,6 @@ export const App = () => {
       <div>
         <Title />
         <ContactForm onAdd={addContact} />
-        <hr />
         <SearchBox value={nameFilter} onChange={setNameFilter} />
         <ContactList onDelete={deleteContact} contacts={findContact} />
       </div>
