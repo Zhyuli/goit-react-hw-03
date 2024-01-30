@@ -42,6 +42,7 @@ export const App = () => {
       <div>
         <Title />
         <ContactForm onAdd={addContact} />
+        <hr />
         <SearchBox value={nameFilter} onChange={setNameFilter} />
         <ContactList onDelete={deleteContact} contacts={findContact} />
       </div>
