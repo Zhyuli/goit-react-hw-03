@@ -1,19 +1,24 @@
 import { Formik, Form, ErrorMessage, Field } from 'formik';
 import { useId } from 'react';
+import { nanoid } from 'nanoid';
 import css from './ContactForm.module.css';
 // import * as Yup from 'yup';
 
 export const ContactForm = ({ onAdd }) => {
   const nameFieldId = useId();
   const numberFieldId = useId();
-  // const handleSubmit = evt => {
-  //   evt.preventDefault();
-  //   onAdd(evt.target.elements.username.value);
-  //   evt.target.reset();
-  // };
 
   return (
-    <Formik>
+    <Formik
+      initialValues={{
+        name: '',
+        number: '',
+      }}
+      onSubmit={(values, actions) => {
+        onAdd({ id: nanoid(), ...values });
+        actions.resetForm();
+      }}
+    >
       <Form className={css.form}>
         <div className={css.formGroup}>
           <label htmlFor={nameFieldId}>Name</label>
